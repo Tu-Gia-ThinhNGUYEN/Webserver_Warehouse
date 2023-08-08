@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MECA__SPK-SALT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/apple-touch-icon-precomposed.semty_pakage.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body onload="onloadFunction()">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="img/Mitsubishi_Electric_logo.svg" alt="">
+        <span class="d-none d-lg-block">| Smart warehouse</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary-red badge-number spinner-grow text-danger"> </span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              <span>No notification </span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item warningAlarm">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Warning</h4>
+                <p class="warningText">no warning</p>
+              </div>
+            </li>
+
+            <li class="notification-item errorAlarm">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Error</h4>
+                <p class="errorText">no error</p>
+              </div>
+            </li>
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="./img/GiaThinh.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">admin</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Gia Thinh</h6>
+              <span>Administrator</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" id="btn-log-off" href="./Log-in_User.html">
+                <i class="bi bi-box-arrow-right "></i>
+                <span>Log off</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link " href="pages-data.html">
+          <i class="bi bi-clipboard-data"></i>
+          <span>Data</span>
+        </a>
+      </li><!-- End Data Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Power<span>| System</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-power"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="power-status-text text-danger">Off</h6>
+                      <span class="text-success small pt-1 fw-bold">220VAC</span><br> <span
+                        class="text-muted small pt-2 ps-1">power supply</span>
+                    </div>
+                  </div>
+
+                </div>
+                <button type="button" class="btn btn-outline-success" id="btn-turn-on-off">Turn On</button>
+              </div>
+            </div><!-- End Sales Card -->
+
+            <!-- Control Mode -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title">Control<span>| Auto/Manual</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-compass-2-line"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="control-status-text">Manual</h6>
+                      <span class="text-success small pt-1 fw-bold">Mode</span><br> <span
+                        class="text-muted small pt-2 ps-1">is being activated</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline-danger" id="btn-control-mode" disabled>Change to
+                  Auto</button>
+              </div>
+            </div><!-- End Control Mode -->
+
+            <!-- Operation Mode -->
+            <div class="col-xxl-4 col-xl-12">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">Operation<span>| Import/Export</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-arrow-left-right"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="operation-status-text">Import</h6>
+                      <span class="text-success small pt-1 fw-bold">Mode</span><br> <span
+                        class="text-muted small pt-2 ps-1">is being activated</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline-danger" id="btn-operation-mode" disabled>Change to
+                  Export</button>
+              </div>
+            </div><!-- End Operation Mode -->
+
+            <!-- Section Overview -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Section Overview <span>| Current</span></h5>
+                  <div class="row justify-content-md-center">
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <h4 class="card-title">Site A<span>| Left</span></h4>
+                      <div class="row g-0 row-cols-auto">
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-1" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A1 <span class="barcodePositionA1"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-2" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A2 <span class="barcodePositionA2"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-3" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A3 <span class="barcodePositionA3"> Emty</span></span>
+                        </div>
+                      </div>
+                      <div class="row g-0 row-cols-auto">
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-4" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A4 <span class="barcodePositionA4"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-5" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A5 <span class="barcodePositionA5"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-6" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A6 <span class="barcodePositionA6"> Emty</span></span>
+                        </div>
+                      </div>
+                      <div class="row g-0 row-cols-auto">
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-7" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A7 <span class="barcodePositionA7"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-8" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A8 <span class="barcodePositionA8"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-9" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class="tooltiptext">#A9 <span class="barcodePositionA9"> Emty</span></span>
+                        </div>
+                        <!-- Vertically centered Modal -->
+                        <div class="modal fade" id="verticalycentered" tabindex="-1">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Product description</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="row-flex">
+
+                                <div class="col boxEmtyModal">
+                                  <img src="./img/box.svg" alt="">
+                                </div>
+                                <div class="col modal-body">
+                                  <span>
+                                    <span class="modalName">Position: </span>
+                                    <span class="modalPosition">A1</span>
+                                    <hr>
+                                    <span class="modalName">Barcode: </span>
+                                    <span class="modalBarcode">8931101199916</span>
+                                    <hr>
+                                    <span class="modalName">Product: </span>
+                                    <span class="modalProduct">New Zealand Milk Powder 1kg x24p</span>
+                                    <hr>
+                                    <span class="modalName">Import Time: </span>
+                                    <span class="modalTimeImport">2022-05-12 15:40:55.000</span>
+                                  </span>
+
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End Vertically centered Modal-->
+                      </div>
+                    </div>
+                    <div class="col col-md-auto">
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <h4 class="card-title">Site B<span>| Right</span></h4>
+                      <div class="row g-0 row-cols-auto">
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-10" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B1 <span class="barcodePositionB1"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-11" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B2 <span class="barcodePositionB2"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-12" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B3 <span class="barcodePositionB3"> Emty</span></span>
+                        </div>
+                      </div>
+                      <div class="row g-0 row-cols-auto">
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-13" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B4 <span class="barcodePositionB4"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-14" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B5 <span class="barcodePositionB5"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-15" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B6 <span class="barcodePositionB6"> Emty</span></span>
+                        </div>
+                      </div>
+                      <div class="row g-0 row-cols-auto">
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-16" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B7 <span class="barcodePositionB7"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-17" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B8 <span class="barcodePositionB8"> Emty</span></span>
+                        </div>
+                        <div class="col">
+                          <img src="./img/product.svg" class="box-dec box-pos-18" alt="" type= ""
+                            data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                          <span class=" tooltiptext">#B9 <span class="barcodePositionB9"> Emty</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="legend">
+                  <img src="./img/product.svg" class="imageFreePlace" alt="">
+                  <span class="activity-content">&nbsp;Free Place &emsp;</span>
+                  <img src="./img/product.svg" alt="">
+                  <span class="activity-content">&nbsp;Loaded Place</span>
+                </div>
+              </div>
+            </div><!-- End Section Overview -->
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Place Data <span>| Current</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">ScrollNo.</th>
+                        <th scope="col">Postion</th>
+                        <th scope="col">Barcode</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>
+                          <p>1</p>
+                        </th>
+                        <th scope="row"><a href="#">#A1</a></th>
+                        <td class="placeDataBarcodeA1">-</td>
+                        <td ><a href="#" class="text-primary placeDataProductA1">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA1">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>2</p>
+                        </th>
+                        <th scope="row"><a href="#">#A2</a></th>
+                        <td class="placeDataBarcodeA2">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA2">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA2">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>3</p>
+                        </th>
+                        <th scope="row"><a href="#">#A3</a></th>
+                        <td class="placeDataBarcodeA3">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA3">-</a></td>
+                        <td><span class="badge bg-warning placeDataStatusA3">Loaded</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>4</p>
+                        </th>
+                        <th scope="row"><a href="#">#A4</a></th>
+                        <td class="placeDataBarcodeA4">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA4">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA4">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>5</p>
+                        </th>
+                        <th scope="row"><a href="#">#A5</a></th>
+                        <td class="placeDataBarcodeA5">-</td>
+                        <td><a href="#" class="text-primar placeDataProductA5">-</a></td>
+                        <td><span class="badge bg-danger placeDataStatusA5">Expired</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>6</p>
+                        </th>
+                        <th scope="row"><a href="#">#A6</a></th>
+                        <td class="placeDataBarcodeA6">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA6">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA6">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>7</p>
+                        </th>
+                        <th scope="row"><a href="#">#A7</a></th>
+                        <td class="placeDataBarcodeA7">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA7">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA7">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>8</p>
+                        </th>
+                        <th scope="row"><a href="#">#A8</a></th>
+                        <td class="placeDataBarcodeA8">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA8">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA8">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>9</p>
+                        </th>
+                        <th scope="row"><a href="#">#A9</a></th>
+                        <td class="placeDataBarcodeA9">-</td>
+                        <td><a href="#" class="text-primary placeDataProductA9">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusA9">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>10</p>
+                        </th>
+                        <th scope="row"><a href="#">#B1</a></th>
+                        <td class="placeDataBarcodeB1">-</td>
+                        <td><a href="#" class="text-primary placeDataProductB1">-</a></td>
+                        <td><span class="badge bg-warning placeDataStatusB1">Loaded</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>11</p>
+                        </th>
+                        <th scope="row"><a href="#">#B2</a></th>
+                        <td class="placeDataBarcodeB2">-</td>
+                        <td><a href="#" class="text-primary placeDataProductB2">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB2">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>12</p>
+                        </th>
+                        <th scope="row"><a href="#">#B3</a></th>
+                        <td class="placeDataBarcodeB3">-</td>
+                        <td><a href="#" class="text-primar placeDataProductB3">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB3">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>13</p>
+                        </th>
+                        <th scope="row"><a href="#">#B4</a></th>
+                        <td class="placeDataBarcodeB4">-</td>
+                        <td><a href="#" class="text-primary placeDataProductB4">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB4">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>14</p>
+                        </th>
+                        <th scope="row"><a href="#">#B5</a></th>
+                        <td class="placeDataBarcodeB5">-</td>
+                        <td><a href="#" class="text-primary placeDataProductB5">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB5">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>15</p>
+                        </th>
+                        <th scope="row"><a href="#">#B6</a></th>
+                        <td class="placeDataBarcodeB6">-</td>
+                        <td><a href="#" class="text-primary placeDataProductB6">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB6">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>16</p>
+                        </th>
+                        <th scope="row"><a href="#">#B7</a></th>
+                        <td class="placeDataBarcodeB7">-</td>
+                        <td><a href="#" class="text-primary placeDataProductB7">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB7">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>17</p>
+                        </th>
+                        <th scope="row"><a href="#">#B8</a></th>
+                        <td class="placeDataBarcodeB8">-</td>
+                        <td><a href="#" class="text-primar placeDataProductB8">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB8">Free</span></td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <p>18</p>
+                        </th>
+                        <th scope="row"><a href="#">#B9</a></th>
+                        <td class="placeDataBarcodeB9">-</td>
+                        <td><a href="#" class="text-primary placeDataStatusB9">-</a></td>
+                        <td><span class="badge bg-success placeDataStatusB9">Free</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
+          </div>
+        </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+          <!-- Section usage -->
+          <div class="card">
+
+            <div class="card-body pb-0">
+              <h5 class="card-title">Section usage <span>| Current</span></h5>
+
+              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '5%',
+                      left: 'center'
+                    },
+                    series: [{
+                      name: 'Number of',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        name: '50% used',
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '18',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false,
+                        name: 'qewrty'
+                      },
+                      data: [{
+                        value: 15,
+                        name: 'Location used'
+                      },
+                      {
+                        value: 3,
+                        name: 'Location free'
+                      },
+                      {
+                        value: 2,
+                        name: 'Expiring product'
+                      },
+                      {
+                        value: 1,
+                        name: 'Expired product'
+                      },
+
+                      ]
+                    }]
+                  });
+                });
+              </script>
+            </div>
+          </div><!-- End Section usage -->
+        </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>SPK-Salt</span></strong>.
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://www.facebook.com/NguyenTuGiaThinh/">Nguyen Tu Gia Thinh</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!---------------------------------------------------------------------------------------------- FIREBASE CONFIGURATION  ------------------------------------------------------------->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+    //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAddowAzqgkuvIOVfJ8JS0eUphevAtj5iU",
+      authDomain: "meca-spksalt.firebaseapp.com",
+      databaseURL: "https://meca-spksalt-default-rtdb.firebaseio.com",
+      projectId: "meca-spksalt",
+      storageBucket: "meca-spksalt.appspot.com",
+      messagingSenderId: "500348364605",
+      appId: "1:500348364605:web:22a95efad81d762d7e4754",
+      measurementId: "G-MDSS3LKDW4"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+
+    import { getDatabase, ref, set, get, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+
+    const db = getDatabase();
+    //------------------------------------------------------------------------------------------------REFERENCES----------------------------------------------------------------
+    //var btnTurnOnOff = document.getElementById("btn-turn-on-off");
+    const btnLogOff = document.querySelector('#btn-log-off');
+    const btnTurnOnOff = document.querySelector('#btn-turn-on-off');
+    const txtPower = document.querySelector('.power-status-text');
+    const btnControlMode = document.querySelector('#btn-control-mode');
+    const txtControlMode = document.querySelector('.control-status-text');
+    const btnOperationMode = document.querySelector('#btn-operation-mode');
+    const txtOperationMode = document.querySelector('.operation-status-text');
+    var isOn; //true is ON
+    var isOff; //false is OFF
+    var isAuto; //true is AUTO
+    var isManual; //true is MANUAL
+    var isImport; //true is IMPORT
+    var isExport; //true is EXPORT
+    var statusClick; //true is Enable to click
+    var loadedPositions = [];
+    var barcodePositions = [];
+    var boxPositions = [];
+    const tooltipBarcodePosition = [];
+    const modalPosition = document.querySelector('.modalPosition');
+    const modalBarcode = document.querySelector('.modalBarcode');
+    const modalProduct = document.querySelector('.modalProduct');
+    const modalTimeImport = document.querySelector('.modalTimeImport');
+    tooltipBarcodePosition[0] = document.querySelector('.barcodePositionA1');
+    tooltipBarcodePosition[1] = document.querySelector('.barcodePositionA2');
+    tooltipBarcodePosition[2] = document.querySelector('.barcodePositionA3');
+    tooltipBarcodePosition[3] = document.querySelector('.barcodePositionA4');
+    tooltipBarcodePosition[4] = document.querySelector('.barcodePositionA5');
+    tooltipBarcodePosition[5] = document.querySelector('.barcodePositionA6');
+    tooltipBarcodePosition[6] = document.querySelector('.barcodePositionA7');
+    tooltipBarcodePosition[7] = document.querySelector('.barcodePositionA8');
+    tooltipBarcodePosition[8] = document.querySelector('.barcodePositionA9');
+
+    tooltipBarcodePosition[9] = document.querySelector('.barcodePositionB1');
+    tooltipBarcodePosition[10] = document.querySelector('.barcodePositionB2');
+    tooltipBarcodePosition[11] = document.querySelector('.barcodePositionB3');
+    tooltipBarcodePosition[12] = document.querySelector('.barcodePositionB4');
+    tooltipBarcodePosition[13] = document.querySelector('.barcodePositionB5');
+    tooltipBarcodePosition[14] = document.querySelector('.barcodePositionB6');
+    tooltipBarcodePosition[15] = document.querySelector('.barcodePositionB7');
+    tooltipBarcodePosition[16] = document.querySelector('.barcodePositionB8');
+    tooltipBarcodePosition[17] = document.querySelector('.barcodePositionB9');
+
+    for(var i = 0; i <18; i++) {
+      boxPositions[i] = document.querySelector(".box-pos-" + String(i+1));
+    }
+
+    const placeDataBarcode = [];
+    const placeDataProduct = [];
+    const placeDataTime = [];
+    const placeDataStatus = [];
+    for(var i = 0; i < 9; i++) {
+      placeDataBarcode[i] = document.querySelector(".placeDataBarcodeA" + String(i+1));
+    }
+    for(var i = 9; i < 18; i++) {
+      placeDataBarcode[i] = document.querySelector(".placeDataBarcodeB" + String(i-8));
+    }
+
+    for(var i = 0; i < 9; i++) {
+      placeDataProduct[i] = document.querySelector(".placeDataProductA" + String(i+1));
+    }
+    for(var i = 9; i < 18; i++) {
+      placeDataProduct[i] = document.querySelector(".placeDataProductB" + String(i-8));
+    }
+
+    for(var i = 0; i < 9; i++) {
+      placeDataTime[i] = document.querySelector(".placeDataTimeA" + String(i+1));
+    }
+    for(var i = 9; i < 18; i++) {
+      placeDataTime[i] = document.querySelector(".placeDataTimeB" + String(i-8));
+    }
+
+    for(var i = 0; i < 9; i++) {
+      placeDataStatus[i] = document.querySelector(".placeDataStatusA" + String(i+1));
+    }
+    for(var i = 9; i < 18; i++) {
+      placeDataStatus[i] = document.querySelector(".placeDataStatusB" + String(i-8));
+    }
+
+    var productName = ["New Zealand Milk Powder 1kg x24p", "Fresh milk without sugar 330ml x24p", "Japanese Ramen Noodles 720g x30p", "Pringles Variety Pack Potato Chips 888g x24"];
+    /*
+    loadedPositions[0] = false; //true is LOADED false is FREE
+    loadedPositions[1] = false; //true is LOADED false is FREE
+    loadedPositions[2] = false; //true is LOADED false is FREE
+    loadedPositions[3] = false; //true is LOADED false is FREE
+    loadedPositions[4] = false; //true is LOADED false is FREE
+    loadedPositions[5] = false; //true is LOADED false is FREE
+    loadedPositions[6] = false; //true is LOADED false is FREE
+    loadedPositions[7] = false; //true is LOADED false is FREE
+    loadedPositions[8] = false; //true is LOADED false is FREE
+    loadedPositions[9] = false; //true is LOADED false is FREE
+    loadedPositions[10] = false; //true is LOADED false is FREE
+    loadedPositions[11] = false; //true is LOADED false is FREE
+    loadedPositions[12] = false; //true is LOADED false is FREE
+    loadedPositions[13] = false; //true is LOADED false is FREE
+    loadedPositions[14] = false; //true is LOADED false is FREE
+    loadedPositions[15] = false; //true is LOADED false is FREE
+    loadedPositions[16] = false; //true is LOADED false is FREE
+    loadedPositions[17] = false; //true is LOADED false is FREE
+    
+    barcodePositions[0] = false; //true is LOADED false is FREE
+    barcodePositions[1] = false; //true is LOADED false is FREE
+    barcodePositions[2] = false; //true is LOADED false is FREE
+    barcodePositions[3] = false; //true is LOADED false is FREE
+    barcodePositions[4] = false; //true is LOADED false is FREE
+    barcodePositions[5] = false; //true is LOADED false is FREE
+    barcodePositions[6] = false; //true is LOADED false is FREE
+    barcodePositions[7] = false; //true is LOADED false is FREE
+    barcodePositions[8] = false; //true is LOADED false is FREE
+    barcodePositions[9] = false; //true is LOADED false is FREE
+    barcodePositions[10] = false; //true is LOADED false is FREE
+    barcodePositions[11] = false; //true is LOADED false is FREE
+    barcodePositions[12] = false; //true is LOADED false is FREE
+    barcodePositions[13] = false; //true is LOADED false is FREE
+    barcodePositions[14] = false; //true is LOADED false is FREE
+    barcodePositions[15] = false; //true is LOADED false is FREE
+    barcodePositions[16] = false; //true is LOADED false is FREE
+    barcodePositions[17] = false; //true is LOADED false is FREE
+    */
+    //------------------------------------------------------------------------------------------------INSERT DATA FUNCTION--------------------------------
+    function InsertData() {
+      set(ref(db, "System/"), {
+        isOn: false, //true is ON false is OFF
+        isManual: false, //true is MANUAL false is AUTO
+        isImport: false, //true is IMPORT false is EXPORT
+        loadedA1: false, //true is LOADED false is FREE
+        loadedA2: false, //true is LOADED false is FREE
+        loadedA3: false, //true is LOADED false is FREE
+        loadedA4: false, //true is LOADED false is FREE
+        loadedA5: false, //true is LOADED false is FREE
+        loadedA6: false, //true is LOADED false is FREE
+        loadedA7: false, //true is LOADED false is FREE
+        loadedA8: false, //true is LOADED false is FREE
+        loadedA9: false, //true is LOADED false is FREE
+
+        loadedB1: false, //true is LOADED false is FREE
+        loadedB2: false, //true is LOADED false is FREE
+        loadedB3: false, //true is LOADED false is FREE
+        loadedB4: false, //true is LOADED false is FREE
+        loadedB5: false, //true is LOADED false is FREE
+        loadedB6: false, //true is LOADED false is FREE
+        loadedB7: false, //true is LOADED false is FREE
+        loadedB8: false, //true is LOADED false is FREE
+        loadedB9: false, //true is LOADED false is FREE
+      })
+        .then(() => {
+          alert("data stored successfully");
+        })
+        .catch((error) => {
+          alert("unsuccessfull, error" + error)
+        });
+    }
+    //-----------------------------------------------------------------------------------SELECT DATA FUNCTION--------------------------------
+    function SelectData() {
+      const dbref = ref(db);
+
+      get(child(dbref, "System/")).then((snapshot) => {
+        if (snapshot.exists()) {
+          var isOn = snapshot.val().TurnOn;
+        }
+        else {
+          alert("No data found");
+        }
+      })
+        .catch((error) => {
+          alert("unsuccessfull, error" + error);
+        });
+    }
+    //-----------------------------------------------------------------------------------UPDATE DATA FUNCTION--------------------------------
+    function UpdateData() {
+      update(ref(db, "System/"), {
+        isOn: true
+      })
+        .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+    }
+    //-----------------------------------------------------------------------------------DELETE DATA FUNCTION--------------------------------
+    function DeleteData() {
+      remove(ref(db, "System/"), {
+        TurnOn: true
+      })
+        .then(() => {
+          alert("Data removed successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+    }
+    //-----------------------------------------------------------------------------------CHANGE BUTTON--------------------------------
+    
+    function changeOnOffButton() {
+      if (!!+isOff) {
+        btnTurnOnOff.textContent = 'Turn On';
+        btnTurnOnOff.classList.remove('btn-outline-danger');
+        btnTurnOnOff.classList.add('btn-outline-success');
+        txtPower.classList.remove('text-success');
+        txtPower.classList.add('text-danger');
+        txtPower.textContent = 'Off';
+        btnControlMode.disabled = true;
+        btnOperationMode.disabled = true;
+      } else if (!!+isOn){
+        btnTurnOnOff.textContent = 'Turn Off';
+        btnTurnOnOff.classList.remove('btn-outline-success');
+        btnTurnOnOff.classList.add('btn-outline-danger');
+        txtPower.classList.remove('text-danger');
+        txtPower.classList.add('text-success');
+        txtPower.textContent = 'On';
+        btnControlMode.disabled = false;
+        btnOperationMode.disabled = false;
+      } else{
+        btnTurnOnOff.textContent = 'Turn On';
+        btnTurnOnOff.classList.remove('btn-outline-danger');
+        btnTurnOnOff.classList.add('btn-outline-success');
+        txtPower.classList.remove('text-success');
+        txtPower.classList.add('text-danger');
+        txtPower.textContent = 'No Active';
+        btnControlMode.disabled = true;
+        btnOperationMode.disabled = true;
+      }
+    }
+    function changeAutoManualMode() {
+      if (!!+isManual) {
+        btnControlMode.textContent = 'Change to Auto';
+        btnControlMode.classList.remove('btn-outline-danger');
+        btnControlMode.classList.add('btn-outline-success');
+        txtControlMode.textContent = 'Manual';
+      } else if (!!+isAuto){
+        btnControlMode.textContent = 'Change to Manual';
+        btnControlMode.classList.remove('btn-outline-success');
+        btnControlMode.classList.add('btn-outline-danger');
+        txtControlMode.textContent = 'Auto';
+      }else{
+        btnControlMode.textContent = 'Change to Auto';
+        btnControlMode.classList.remove('btn-outline-danger');
+        btnControlMode.classList.add('btn-outline-success');
+        txtControlMode.textContent = 'No Active';
+      }
+    }
+    function changeImportExport() {
+      if (!!+isExport) {
+        btnOperationMode.textContent = 'Change to Import';
+        btnOperationMode.classList.remove('btn-outline-danger');
+        btnOperationMode.classList.add('btn-outline-success');
+        txtOperationMode.textContent = 'Export';
+      } else if(!!+isImport){
+        btnOperationMode.textContent = 'Change to Export';
+        btnOperationMode.classList.remove('btn-outline-success');
+        btnOperationMode.classList.add('btn-outline-danger');
+        txtOperationMode.textContent = 'Import';
+      }else{
+        btnOperationMode.textContent = 'Change to Import';
+        btnOperationMode.classList.remove('btn-outline-danger');
+        btnOperationMode.classList.add('btn-outline-success');
+        txtOperationMode.textContent = 'No Active';
+      }
+    }
+    function changeLoadPlace(){
+      var chartLoaded = 0;
+      var chartFree = 18;
+      var chartExpired = 0;
+      for (let i = 0; i < 18; i++) {
+        if(!!+loadedPositions[i])
+        {
+          document.querySelector(".box-pos-"+String(i+1)).style.opacity = "1";
+          tooltipBarcodePosition[i].textContent = String(barcodePositions[i]);
+          chartLoaded++;
+          chartFree = 18-chartLoaded;
+          chartChangeValue(chartLoaded, chartFree, chartExpired);
+          switch(barcodePositions[i]){
+            case "1101199916":
+              placeDataBarcode[i].textContent = "8931101199916";
+              placeDataProduct[i].textContent = productName[0];
+              placeDataStatus[i].textContent = "Loaded";
+              
+              break;
+            case "1101199923":
+              placeDataBarcode[i].textContent = "8931101199923";
+              placeDataProduct[i].textContent = productName[1];
+              placeDataStatus[i].textContent = "Loaded";
+              break;
+            case "1101199930":
+              placeDataBarcode[i].textContent = "8931101199930";
+              placeDataProduct[i].textContent = productName[2];
+              placeDataStatus[i].textContent = "Loaded";
+              break;
+            case "1101199947":
+              placeDataBarcode[i].textContent = "8931101199947";
+              placeDataProduct[i].textContent = productName[3];
+              placeDataStatus[i].textContent = "Loaded";
+              break;
+            default:
+              break;
+          }
+          placeDataStatus[i].classList.remove('bg-success');
+          placeDataStatus[i].classList.add('bg-warning');
+        }else{
+          tooltipBarcodePosition[i].textContent = "Emty";
+          //placeDataBarcode[i].innerHTML = '-';
+          // placeDataProduct[i].textContent = '-';
+          // placeDataStatus[i].textContent = "Free";
+          // placeDataStatus[i].classList.remove('bg-warning');
+          // placeDataStatus[i].classList.remove('bg-danger');
+          // placeDataStatus[i].classList.add('bg-success');
+        }
+      }
+    }
+    
+    function chartChangeValue(chartLoaded, chartFree, chartExpired){
+      echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '5%',
+                      left: 'center'
+                    },
+                    series: [{
+                      name: 'Number of',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        name: '50% used',
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '18',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false,
+                        name: 'qewrty'
+                      },
+                      data: [{
+                        value: Number(chartLoaded),
+                        name: 'Location used'
+                      },
+                      {
+                        value: Number(chartFree),
+                        name: 'Location free'
+                      },
+                      {
+                        value: 0,
+                        name: 'Expiring product'
+                      },
+                      {
+                        value: Number(chartExpired),
+                        name: 'Expired product'
+                      },
+
+                      ]
+                    }]
+                  });
+    }
+    //-----------------------------------------------------------------------------------MY FUNCTION--------------------------------
+    
+    function UpdateIsOn() {
+      if(!(!!+isOn) && (!!+isOff)) {
+        update(ref(db, "System/"), {
+        statusClick: "1",
+        isOn: "1",
+        isOff: "0",
+      })
+      .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+      }
+      else if((!!+isOn) && !(!!+isOff)) {
+        update(ref(db, "System/"), {
+        statusClick: "1",
+        isOn: "0",
+        isOff: "1",
+      })
+      .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+      }
+    }
+    function UpdateIsManual() {
+      if(!(!!+isAuto) && (!!+isManual)) {
+        update(ref(db, "System/"), {
+        statusClick: "1",
+        isAuto: "1",
+        isManual: "0",
+      })
+      .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+      }
+      else if((!!+isAuto) && !(!!+isManual)) {
+        update(ref(db, "System/"), {
+        statusClick: "1",
+        isAuto: "0",
+        isManual: "1",
+      })
+      .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+      }
+      }
+    function UpdateIsImport() {
+      if(!(!!+isImport) && (!!+isExport)) {
+        update(ref(db, "System/"), {
+        statusClick: "1",
+        isImport: "1",
+        isExport: "0",
+      })
+      .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+      }
+      else if((!!+isImport) && !(!!+isExport)) {
+        update(ref(db, "System/"), {
+        statusClick: "1",
+        isImport: "0",
+        isExport: "1",
+      })
+      .then(() => {
+          alert("Data updated successfully");
+        })
+        .catch((error) => {
+          alert("Unsuccessfull, error" + error)
+        });
+      }
+    }
+    function onloadFunction() {
+      var chartLoaded = 0;
+      var chartFree = 18;
+      var chartExpired = 0;
+      for(var i = 0; i< 18; i++)
+      {
+          if(!!+loadedPositions[i])
+            {
+              chartLoaded++;
+              chartFree = 18-chartLoaded;
+            }
+      }
+        chartChangeValue(chartLoaded, chartFree, chartExpired);
+    }
+    //-----------------------------------------------------------------------------------READ DATA--------------------------------
+    const SystemRef = ref(db, 'System/');
+    
+    onValue(SystemRef, (snapshot) => {
+      isOn = snapshot.val().isOn;
+      isOff = snapshot.val().isOff;
+      isAuto = snapshot.val().isAuto;
+      isManual = snapshot.val().isManual;
+      isImport = snapshot.val().isImport;
+      isExport = snapshot.val().isExport;
+      statusClick = snapshot.val().statusClick;
+      loadedPositions[0] = snapshot.val().loadedA1;
+      loadedPositions[1] = snapshot.val().loadedA2;
+      loadedPositions[2] = snapshot.val().loadedA3;
+      loadedPositions[3] = snapshot.val().loadedA4;
+      loadedPositions[4] = snapshot.val().loadedA5;
+      loadedPositions[5] = snapshot.val().loadedA6;
+      loadedPositions[6] = snapshot.val().loadedA7;
+      loadedPositions[7] = snapshot.val().loadedA8;
+      loadedPositions[8] = snapshot.val().loadedA9;
+      loadedPositions[9] = snapshot.val().loadedB1;
+      loadedPositions[10] = snapshot.val().loadedB2;
+      loadedPositions[11] = snapshot.val().loadedB3;
+      loadedPositions[12] = snapshot.val().loadedB4;
+      loadedPositions[13] = snapshot.val().loadedB5;
+      loadedPositions[14] = snapshot.val().loadedB6;
+      loadedPositions[15] = snapshot.val().loadedB7;
+      loadedPositions[16] = snapshot.val().loadedB8;
+      loadedPositions[17] = snapshot.val().loadedB9;
+
+      barcodePositions[0] = snapshot.val().barcodeA1;
+      barcodePositions[1] = snapshot.val().barcodeA2;
+      barcodePositions[2] = snapshot.val().barcodeA3;
+      barcodePositions[3] = snapshot.val().barcodeA4;
+      barcodePositions[4] = snapshot.val().barcodeA5;
+      barcodePositions[5] = snapshot.val().barcodeA6;
+      barcodePositions[6] = snapshot.val().barcodeA7;
+      barcodePositions[7] = snapshot.val().barcodeA8;
+      barcodePositions[8] = snapshot.val().barcodeA9;
+      barcodePositions[9] = snapshot.val().barcodeB1;
+      barcodePositions[10] = snapshot.val().barcodeB2;
+      barcodePositions[11] = snapshot.val().barcodeB3;
+      barcodePositions[12] = snapshot.val().barcodeB4;
+      barcodePositions[13] = snapshot.val().barcodeB5;
+      barcodePositions[14] = snapshot.val().barcodeB6;
+      barcodePositions[15] = snapshot.val().barcodeB7;
+      barcodePositions[16] = snapshot.val().barcodeB8;
+      barcodePositions[17] = snapshot.val().barcodeB9;
+      changeOnOffButton();
+      changeAutoManualMode();
+      changeImportExport();
+      changeLoadPlace();
+    });
+    
+    // const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    // const d = new Date();
+    // function GetAllDataOnce() {
+    //   const WarehouseRef = ref(db, 'Warehouse/2022/May/12/');
+    //   var dataWarehouse;
+    //   get(child(WarehouseRef)).then((snapshot)=>{
+    //     var warehouse = [];
+  
+    //     snapshot.forEach((childSnapshot)=>{
+    //       warehouse.push(childSnapshot.val());
+    //     });
+    //   });
+    // }
+    //window.onload = GetAllDataOnce;
+    //-----------------------------------------------------------------------------------Assign Events--------------------------------
+    btnTurnOnOff.addEventListener('click', UpdateIsOn);
+    btnControlMode.addEventListener('click',UpdateIsManual);
+    btnOperationMode.addEventListener('click',UpdateIsImport);
+    for(var i = 0; i < 9; i++)
+    {
+        boxPositions[i].addEventListener('click',()=>{
+        modalPosition.textContent = "A"+String(i+1);
+        if(!!+loadedPositions[i])
+        {
+          modalBarcode.textContent = barcodePositions[i];
+          modalProduct.textContent = "None";
+          modalTimeImport.textContent = "None";
+        } else{
+          modalBarcode.textContent = "None";
+          modalProduct.textContent = "None";
+          modalTimeImport.textContent = "None";
+        }
+      });
+    }
+    for(var i = 9; i < 17; i++)
+    {
+      boxPositions[i].addEventListener('click',()=>{
+        modalPosition.textContent = "B"+String(i-8);
+        if(!!+loadedPositions[i])
+        {
+          modalBarcode.textContent = barcodePositions[i];
+          modalProduct.textContent = "None";
+          modalTimeImport.textContent = "None";
+        } else{
+          modalBarcode.textContent = "None";
+          modalProduct.textContent = "None";
+          modalTimeImport.textContent = "None";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

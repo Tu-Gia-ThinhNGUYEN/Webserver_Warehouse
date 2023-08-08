@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MECA - SPK-SALT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/apple-touch-icon-precomposed.semty_pakage.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Main script -->
+  <script src="./RUserWebLib.js"></script>
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="table2excel.js"></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="img/Mitsubishi_Electric_logo.svg" alt="">
+        <span class="d-none d-lg-block">| Smart warehouse</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="./img/GiaThinh.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">admin</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Gia Thinh</h6>
+              <span>Administrator</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Log off</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link " href="pages-data.html">
+          <i class="bi bi-clipboard-data"></i>
+          <span>Data</span>
+        </a>
+      </li><!-- End Data Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Data</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section contact">
+      <div class="card-body">
+        <h5 class="card-title">History <span>| Today</span></h5>
+
+        <table class="table table-borderless datatable" id="tblexportData">
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Postion</th>
+              <th scope="col">Barcode</th>
+              <th scope="col">Product</th>
+              <th scope="col">Time</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tbody1">
+            <!-- <tr>
+              <th>
+                <p>2456</p>
+              </th>
+              <th scope="row"><a href="#">#A4</a></th>
+              <td>8931101199947</td>
+              <td><a href="#" class="text-primary">Pack Potato Chips 888g x24</a></td>
+              <td>12:40:02 AM 04/30/2022</td>
+              <td><span class="badge bg-success">Imported</span></td>
+            </tr>
+            <tr>
+              <th>
+                <p>2455</p>
+              </th>
+              <th scope="row"><a href="#">#A1</a></th>
+              <td>8931101199916</td>
+              <td><a href="#" class="text-primary">New Zealand Milk Powder 1kg x24p</a></td>
+              <td>12:36:28 AM 04/30/2022</td>
+              <td><span class="badge bg-success">Imported</span></td>
+            </tr>
+            <tr>
+              <th>
+                <p>2454</p>
+              </th>
+              <th scope="row"><a href="#">#A1</a></th>
+              <td>8931101199947</td>
+              <td><a href="#" class="text-primary">Pack Potato Chips 888g x24</a></td>
+              <td>12:32:42 AM 04/30/2022</td>
+              <td><span class="badge bg-warning">Exported</span></td>
+            </tr>
+            <tr>
+              <th>
+                <p>2453</p>
+              </th>
+              <th scope="row"><a href="#">#A1</a></th>
+              <td>8931101199947</td>
+              <td><a href="#" class="text-primary">Pack Potato Chips 888g x24</a></td>
+              <td>12:30:12 AM 04/30/2022</td>
+              <td><span class="badge bg-success">Imported</span></td>
+            </tr>
+            <tr>
+              <th>
+                <p>2452</p>
+              </th>
+              <th scope="row"><a href="#">#A6</a></th>
+              <td>8931101199954</td>
+              <td><a href="#" class="text-primar">Chocolate Milk 800g x24</a></td>
+              <td>12:04:14 AM 04/30/2022</td>
+              <td><span class="badge bg-danger">Expired</span></td>
+            </tr>
+            <tr>
+              <th>
+                <p>2451</p>
+              </th>
+              <th scope="row"><a href="#">#A2</a></th>
+              <td>8931101199930</td>
+              <td><a href="#" class="text-primary">Japanese Ramen Noodles 720g x30p</a></td>
+              <td>12:01:29 AM 04/30/2022</td>
+              <td><span class="badge bg-success">Imported</span></td>
+            </tr>
+            <tr>
+              <th>
+                <p>2450</p>
+              </th>
+              <th scope="row"><a href="#">#A1</a></th>
+              <td>8931101199947</td>
+              <td><a href="#" class="text-primary">Pack Potato Chips 888g x24</a></td>
+              <td>11:59:29 AM 04/30/2022</td>
+              <td><span class="badge bg-success">Imported</span></td>
+            </tr> -->
+          </tbody>
+        </table>
+        <button class="btn btn-success" id="downloadExcel">Export Table Data To Excel File</button>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>SPK-Salt</span></strong>.
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://www.facebook.com/NguyenTuGiaThinh/">Nguyen Tu Gia Thinh</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    document.getElementById('downloadExcel').addEventListener('click', function() {
+      var table2excel = new Table2Excel();
+    table2excel.export(document.querySelectorAll("#tblexportData"));
+    });
+    
+  </script>
+  <!---------------------------------------------------------------------------------------------- FIREBASE CONFIGURATION  ------------------------------------------------------------->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+    //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAddowAzqgkuvIOVfJ8JS0eUphevAtj5iU",
+      authDomain: "meca-spksalt.firebaseapp.com",
+      databaseURL: "https://meca-spksalt-default-rtdb.firebaseio.com",
+      projectId: "meca-spksalt",
+      storageBucket: "meca-spksalt.appspot.com",
+      messagingSenderId: "500348364605",
+      appId: "1:500348364605:web:22a95efad81d762d7e4754",
+      measurementId: "G-MDSS3LKDW4"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+
+    import { getDatabase, ref, set, get, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+
+    const db = getDatabase();
+    
+    //-----------------------------------------------------------------------------------FILLING DATA--------------------------------
+    var stdNo = 0;
+    var tbody = document.getElementById('tbody1');
+
+    function AddItemToTable(no,position,barcode,product,time,status){
+      let tr = document.createElement("tr");
+      let th1 = document.createElement("th");
+      let p = document.createElement("p");
+      let th2 = document.createElement("td");
+      let a1 = document.createElement("a");
+      //th2.attr('scope','row');
+      let td1 = document.createElement("td");
+      let td2 = document.createElement("td");
+      //td2.attr('class','text-primary');
+      td2.classList.add('text-primary');
+      let a2 = document.createElement("a");
+      let td3 = document.createElement("td");
+      let td4 = document.createElement("td");
+      let span = document.createElement("span");
+      span.classList.add('badge');
+
+      p.innerHTML = no;
+      a1.innerHTML = position;
+      td1.innerHTML = barcode;
+      a2.innerHTML = product;
+      td3.innerHTML = time;
+      span.innerHTML = status;
+
+      if(span.textContent == "Imported")
+        span.classList.add('bg-success');
+      else if(span.textContent == "Exported")
+        span.classList.add('bg-warning');
+      else
+        span.classList.add('bg-danger');
+      tr.appendChild(th1);
+      th1.appendChild(p);
+      tr.appendChild(th2);
+      th2.appendChild(a1);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      td2.appendChild(a2);
+      tr.appendChild(td3);
+      tr.appendChild(td4);
+      td4.appendChild(span);
+      tbody.appendChild(tr);
+    }
+
+    function AddAllItemsToTable(warehouse){
+      tbody.innerHTML ="";
+      warehouse.forEach(element=>{
+        AddItemToTable(element.ScrollNo, element.Position, element.Barcode, element.Product, element.Time, element.Status);
+      });
+    }
+    //-----------------------------------------------------------------------------------READ DATA--------------------------------
+    
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const d = new Date();
+    
+    function GetAllDataOnce() {
+      const dbRef = ref(db);
+      var dataWarehouse = [];
+      get(child(dbRef, "Warehouse/2022/May/12/")).then((snapshot)=>{
+        var warehouse = [];
+  
+        snapshot.forEach((childSnapshot)=>{
+          warehouse.push(childSnapshot.val());
+        });
+        AddAllItemsToTable(warehouse);
+      });
+    }
+
+    function GetAllDataRealtime() {
+      const WarehouseRef = ref(db, "Warehouse/2022/May/12");
+      
+      onValue(WarehouseRef,(snapshot)=>{
+        var dataWarehouse = [];
+        snapshot.forEach(childSnapshot=>{
+          dataWarehouse.push(childSnapshot.val());
+        });
+        AddAllItemsToTable(dataWarehouse);
+      });
+    }
+
+    window.onload = GetAllDataRealtime;
+
+    //-----------------------------------------------------------------------------------Assign Events--------------------------------
+
+  </script>
+</body>
+
+</html>
